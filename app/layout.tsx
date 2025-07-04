@@ -14,7 +14,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "NoteHub",
     description: "Take notes, organize tasks, and collaborate effortlessly. Your all-in-one digital notebook.",
-    url: "",
+    url: "https://08-zustand-three.vercel.app/",
     siteName: 'NoteHub',
     images: [
       {

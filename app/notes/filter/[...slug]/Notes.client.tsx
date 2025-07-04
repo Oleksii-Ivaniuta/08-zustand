@@ -30,7 +30,7 @@ export default function NotesClient({initialResponse, tag} : NotesClientProps) {
     queryFn: () => fetchNotes(debouncedQuery, currentPage, tag),
     initialData: initialResponse,
     placeholderData: keepPreviousData,
-    refetchOnMount: false,
+    refetchOnMount: true,
     });
 
     const router = useRouter();

@@ -8,8 +8,8 @@ export async function generateMetadata() {
   description: `Here you can create new note`,
   openGraph: {
     title: `Notehub - Create new note`,
-  description: `Here you can create new note`,
-    url: "",
+  description: `Here you can create your new note`,
+    url: "https://08-zustand-three.vercel.app/notes/actions/create",
     siteName: 'NoteHub',
     images: [
       {
