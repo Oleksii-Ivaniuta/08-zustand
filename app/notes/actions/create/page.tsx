@@ -5,7 +5,8 @@ import css from "./CreateNote.module.css";
 export async function generateMetadata() {
   return {
     title: `Notehub - Create new note`,
-  description: `Here you can create new note`,
+    description: `Here you can create new note`,
+    url: "https://08-zustand-three.vercel.app/notes/actions/create",
   openGraph: {
     title: `Notehub - Create new note`,
   description: `Here you can create your new note`,

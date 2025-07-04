@@ -15,7 +15,8 @@ export async function generateMetadata({params}:NoteDetailsProps) {
   const note = await fetchNoteById(parseInt(id));
   return {
     title: `Notehub - ${note.title}`,
-  description: `${note.content}`,
+    description: `${note.content}`,
+    url: `https://08-zustand-three.vercel.app/notes/${note.id}`,
   openGraph: {
     title: `Notehub - ${note.title}`,
     description: `${note.content}`,

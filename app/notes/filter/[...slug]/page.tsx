@@ -10,7 +10,8 @@ export async function generateMetadata({params}: NotesProps) {
   const category = slug[0];
   return {
     title: `Notehub - ${category}`,
-  description: `Explore all notes in the ${category} category. Stay organized and easily find what matters most`,
+    description: `Explore all notes in the ${category} category. Stay organized and easily find what matters most`,
+    url: `https://08-zustand-three.vercel.app/notes/filter/${category}`,
   openGraph: {
     title: `Notehub - ${category}`,
   description: `Explore all notes in the ${category} category. Stay organized and easily find what matters most`,
