@@ -6,7 +6,7 @@ import { useQueryClient, useMutation } from '@tanstack/react-query';
 import { createNote } from '@/lib/api';
 import { useRouter } from 'next/navigation';
 import * as Yup from 'yup';
-import { useNoteDraftStore } from '@/lib/store/NoteStore';
+import { useNoteDraftStore } from '@/lib/store/noteStore';
 const NoteFormSchema = Yup.object().shape({
   title: Yup.string()
     .min(3, 'Too short title, min 3 symbols')
