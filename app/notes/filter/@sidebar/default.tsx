@@ -6,7 +6,7 @@ export default function SidebarNotes() {
   
     <ul className={css.menuList}>
       <li className={css.menuItem}>
-          <Link href={`/notes/actions/create`} className={css.menuLink}>
+          <Link href={`/notes/action/create`} className={css.menuLink}>
             Create new note
           </Link>
       </li>

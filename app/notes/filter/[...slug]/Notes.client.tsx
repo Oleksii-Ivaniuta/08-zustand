@@ -34,7 +34,7 @@ export default function NotesClient({initialResponse, tag} : NotesClientProps) {
     });
 
     const router = useRouter();
-    const createNotePage = () => router.push('/notes/actions/create');
+    const createNotePage = () => router.push('/notes/action/create');
   
  
   const handlePageChange = (page: number) => {
