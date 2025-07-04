@@ -5,7 +5,8 @@ import { useState } from 'react';
 
 export default function TagsMenu() {
     const [isOpen, setIsOpen] = useState<boolean>(false);
-    const toogle = () => setIsOpen(!isOpen);
+  const toogle = () => setIsOpen(!isOpen);
+  
 
   return (
     <div className={css.menuContainer}>

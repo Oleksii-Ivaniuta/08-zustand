@@ -10,6 +10,7 @@ interface  NoteDetailsProps {
   params: Promise<{ id: string }>;
 };
 
+
 export default async function NotePreview({params} : NoteDetailsProps) {
   const { id } = await params;
   const queryClient = new QueryClient();

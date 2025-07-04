@@ -2,9 +2,17 @@ import Link from "next/link";
 import css from "./SidebarNotes.module.css";
 
 export default function SidebarNotes() {
-    return (
-        <ul className={css.menuList}>
-        <li className={css.menuItem}>
+  return (
+  
+    <ul className={css.menuList}>
+      <li className={css.menuItem}>
+          <Link href={`/notes/actions/create`} className={css.menuLink}>
+            Create new note
+          </Link>
+      </li>
+      <hr />
+      <br />
+            <li className={css.menuItem}>
           <Link href={`/notes/filter/All`} className={css.menuLink}>
             All
           </Link>

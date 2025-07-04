@@ -8,7 +8,31 @@ import {
   
   interface  NoteDetailsProps {
     params: Promise<{ id: string }>;
-  };
+};
+  
+export async function generateMetadata({params}:NoteDetailsProps) {
+  const { id } = await params;
+  const note = await fetchNoteById(parseInt(id));
+  return {
+    title: `Notehub - ${note.title}`,
+  description: `${note.content}`,
+  openGraph: {
+    title: `Notehub - ${note.title}`,
+    description: `${note.content}`,
+    url: "",
+    siteName: 'NoteHub',
+    images: [
+      {
+        url: 'https://ac.goit.global/fullstack/react/notehub-og-meta.jpg',
+        width: 1200,
+        height: 630,
+        alt: "NoteHub",
+      },
+    ],
+    type: 'article',
+  },
+  }
+}
   
   export default async function NoteDetails({params} : NoteDetailsProps) {
     const { id } = await params;
