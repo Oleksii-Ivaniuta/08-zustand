@@ -5,18 +5,18 @@ import {
   } from "@tanstack/react-query";
   import { fetchNoteById } from "@/lib/api";
   import NoteDetailsClient from "./NoteDetails.client";
+import { Metadata } from "next";
   
   interface  NoteDetailsProps {
     params: Promise<{ id: string }>;
 };
   
-export async function generateMetadata({params}:NoteDetailsProps) {
+export async function generateMetadata({params}:NoteDetailsProps): Promise<Metadata> {
   const { id } = await params;
   const note = await fetchNoteById(parseInt(id));
   return {
     title: `Notehub - ${note.title}`,
     description: `${note.content}`,
-    url: `https://08-zustand-three.vercel.app/notes/${note.id}`,
   openGraph: {
     title: `Notehub - ${note.title}`,
     description: `${note.content}`,
